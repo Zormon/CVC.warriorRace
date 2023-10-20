@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+
+import cartel from "@images/cartel.avif";
+const logos = await Astro.glob('../assets/images/logos/*.avif')
+
+---
+
+<Layout title="Warrior Race by Playland">
+	<section class="flex flex-col md:flex-row justify-center mx-4 my-16">
+		<div class="text-center text-blue-950">
+			<p class="my-4 text-3xl">Parque Sur de Maspalomas</p>
+			<p class="text-red-700 text-5xl my-4"><strong>25 y 26 de Noviembre</strong></p>
+			<p class="bg-red-700 text-white my-4 text-5xl font-bold py-4">Más que un evento</p>
+			<p class="my-4 text-2xl">Ven y disfruta de una carrera, llena de sorpresas y obstáculos que te enamorarán.</p>
+		</div>
+		<figure class="ml-4"><img src={cartel.src} alt="Cartel playland"></figure>
+	</section>
+	
+	<section class="mx-4 my-16 text-lg">
+		<p class="mb-3">Warrior Race es una carrera de obstáculos que está pensada para todos los públicos.</p>
+		<p class="mb-3">Desde que realizamos la primera edición, nuestro objetivo principal, es hacer crecer esta modalidad deportiva y que todo el mundo pueda disfrutar de un evento totalmente completo, en el que no solo tienes que ser rápido/a corriendo, si no que todas tus capacidades se pondrán a prueba como; la fuerza, la destreza, la velocidad, la concentración….</p>
+		<p class="mb-3">Hay diferentes modalidades y horarios porque todos los obstáculos están adaptados a ti, sea cual sea tu nivel, ya vengas a competir o pasártelo en grande solo/a, con familiares, en pareja o con un grupo amigos/as formando un equipo.</p>
+		<p class="mb-3">Pero no solo somos una carrera, somos un Festival para las familias y amigos/as donde podrás disfrutar durante todo el día de actividades al aire libre, talleres de circo, magia danza, conciertos, zona market, zona gastro, y mucho más…</p>
+		<p class="mb-3">Atención a nuestras noticias en redes para que descubras que sorpresas te esperan.</p>
+	</section>
+
+	<section class="mx-4 my-16">
+		<h2 class="text-3xl text-blue-950 text-bold">Patrocina</h2>
+		<ul class="grid grid-cols-3 gap-8 justify-center md:grid-cols-5">
+		{
+			logos.map( ( logo ) => (
+				<li><img class="max-h-40" src={logo.default.src} alt={'logo '+logo.default.src.split('/').pop().split('.').shift()} /></li>
+			))
+		}
+		</ul>
+	</section>
+
+</Layout>
