@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import Layout from "../layouts/MainLayout.astro";
 
 import cartel from "@images/cartel.avif";
@@ -14,7 +15,7 @@ const logos = await Astro.glob('../assets/images/logos/*.avif')
 			<p class="bg-red-700 text-white my-4 text-5xl font-bold py-4">Más que un evento</p>
 			<p class="my-4 text-2xl">Ven y disfruta de una carrera, llena de sorpresas y obstáculos que te enamorarán.</p>
 		</div>
-		<figure class="ml-4"><img src={cartel.src} alt="Cartel playland"></figure>
+		<figure class="ml-4"><Picture src={cartel} formats={['avif', 'webp']} alt="Cartel playland" /></figure>
 	</section>
 	
 	<section class="mx-4 my-16 text-lg">
@@ -27,10 +28,10 @@ const logos = await Astro.glob('../assets/images/logos/*.avif')
 
 	<section class="mx-4 my-16">
 		<h2 class="text-3xl text-blue-950 text-bold">Patrocina</h2>
-		<ul class="grid grid-cols-3 gap-8 justify-center md:grid-cols-5">
+		<ul class="grid grid-cols-3 gap-8 place-items-center md:grid-cols-5">
 		{
 			logos.map( ( logo ) => (
-				<li><img class="max-h-40" src={logo.default.src} alt={'logo '+logo.default.src.split('/').pop().split('.').shift()} /></li>
+				<li><Picture src={logo.default} formats={['avif', 'webp']} height="130" alt={'logo '+logo.default.src.split('/').pop().split('.').shift()} /></li>
 			))
 		}
 		</ul>

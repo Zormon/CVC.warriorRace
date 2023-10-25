@@ -1,0 +1,27 @@
+---
+import type { obstacle } from "@src/types.d"
+import { Picture } from 'astro:assets'
+
+type Props = obstacle<ImageMetadata>
+
+const { img, categories, alt='' } = Astro.props;
+
+const cats = {
+    '1': ['1,5K', 'bg-green-500'],
+    '3': ['3K', 'bg-blue-500'],
+    '5': ['5K', 'bg-red-500'],
+}
+---
+
+<div class="relative">
+    <div class="absolute top-0 left-0 skew-x-6">
+        {
+            categories.map((el) => (
+                
+                <span class:list={ ['p-2 text-white', cats[el][1]] }>{cats[el][0]}</span>
+            ))
+        }
+        <span class="bg-black text-white px-4">{alt}</span>
+    </div>
+    <Picture src={img} alt={alt} width="350" formats={['avif', 'webp']} />
+</div>

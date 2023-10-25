@@ -1,0 +1,445 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import Item from "../components/textBlock.astro";
+
+import RegisterButton from "@components/RegisterButton.svelte";
+---
+
+<Layout title="Preguntas comunes | Warrior Race" page="faq">
+    <section class="flex flex-col items-center">
+        <div class="max-w-5xl mx-4 my-10">
+            <Item title="¿Quién puede participar?">
+                <p>
+                    Podrá participar cualquier persona siguiendo las indicaciones y
+                    recomendaciones de cada modalidad.
+                </p>
+                <p>
+                    Es un evento para todas las edades y forma física, solo tienes
+                    que estar dispuesto a pasarlo bien.
+                </p>
+            </Item>
+
+            <Item title="¿En qué tandas puntúo?">
+                <p>
+                    Desde la organización queremos que la diversión sea tu única
+                    meta. Por lo que si participas en las modalidades Playland
+                    Warrior Race 1,5K., Warrior Race 3K y Warrior Race Extreme 5K,
+                    superar todas las pruebas será tu objetivo para poder optar a
+                    ganar uno de los muchos premios del sorteo que se realiza al
+                    final del día.
+                </p>
+                <p>
+                    La tanda competitiva será la iniciada en la modalida Warrior
+                    Race Xtreme 5K Adults Competitiva, cuya salida se toma a las
+                    19:00h que puedde ser modalidad individual o en equipo (desde 2
+                    personas hasta 4 personas)
+                </p>
+            </Item>
+
+            <Item title="¿Cuándo es la prueba?">
+                <p>La carrera se celebrará el 25 y 26 de Noviembre de 2023</p>
+            </Item>
+
+            <Item title="¿Dónde se celebra la WR By Playland?">
+                <p>La WR by Playland se celebra en el municipio de Maspalomas.</p>
+                <p>El punto de partida es en el Parque Sur Maspalomas.</p>
+                <p>
+                    Cuenta con 3 zonas de pruebas: Barranco de Maspalomas, Campo de
+                    fútbol nº3 y Parque Sur.
+                </p>
+                <p>
+                    Además en Parque Sur encontrarás zona gastro y zona market,
+                    actividades y animación para todas las edades, durante la
+                    duración del evento.
+                </p>
+                <p>
+                    Consultar mapa para saber que encontrarás en cada emplazamiento
+                    Warrior (proximamente)
+                </p>
+            </Item>
+
+            <Item title="¿Qué modalidades de WR By Playland hay?">
+                <ul class="list-disc ml-4">
+                    <li>Playland Warrior Race 1,5K</li>
+                    <li>Warrior Race 3K</li>
+                    <li>Warrior Race Extreme 5K</li>
+                    <li>Warrior Race Xtreme 5K Adults Competitiva</li>
+                </ul>
+                <p>
+                    <small>(Sujeto a modificaciones por adaptación de grupos)</small
+                    >
+                </p>
+            </Item>
+
+            <Item title="¿En qué categoría me apunto?">
+                <h3 class="text-center text-lg relative top-[-10px]">Nuestra recomendación</h3>
+                <ul class="ml-4">
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">
+                            Playland Warrior Race 1,5K
+                        </h3>
+                        <p>
+                            Pensada para toda la familia desde 5 años. Las pruebas
+                            que conforman esta modalidad los podrás ver en nuestra
+                            sección Obstáculos y valorar si son aptas para tus
+                            peques.
+                        </p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">Warior Race 3K</h3>
+                        <p>
+                            Pensada para toda la familia desde 10 años. Las pruebas
+                            que conforman esta modalidad los podrás ver en nuestra
+                            sección Obstáculos y valorar si son aptas para tus
+                            peques.
+                        </p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">Warior Race 5K</h3>
+                        <p>
+                            Pensada para toda la familia desde 13 años. Las pruebas
+                            que conforman esta modalidad los podrás ver en nuestra
+                            sección Obstáculos y valorar si son aptas para los
+                            integrantes de tu equipo.
+                        </p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">
+                            Warrior Race Xtreme 5K Adults
+                        </h3>
+                        <p>
+                            Para mayores de 18 años y sin límite de edad. Las
+                            pruebas que conforman esta modalidad los podrás ver en
+                            nuestra sección Obstáculos.
+                        </p>
+                    </li>
+                </ul>
+            </Item>
+
+            <Item title="¿Que incluye cada modalidad?">
+                <ul class="list-disc ml-4">
+                    <li>1 Plaza asegurada en cada taller que se realizada: Circo, Danza, Gaming</li>
+                    <li>Disfrutar sin límite, en el horario activo, de los hinchables de ocio</li>
+                    <li>Disfrutar de los conciertos de música en vivo <em>(+ de 5 conciertos)</em></li>
+                    <li>Y muchas sorpresas más!</li>
+                </ul>
+                <ul class="ml-4 mt-4">
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">
+                            Playland Warrior Race 1,5K
+                        </h3>
+                        <p class="ml-4">Realizar 1 vez el circuito de esta modalidad de 15 obstáculos</p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">Warior Race 3K</h3>
+                        <p class="ml-4">Realizar 1 vez el circuito de esta modalidad de 20 obstáculos</p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">Warior Race 5K</h3>
+                        <p class="ml-4">Realizar 1 vez el circuito de esta modalidad de 25 obstáculos</p>
+                    </li>
+                    <li class="mb-6">
+                        <h3 class="font-bold text-lg">
+                            Warrior Race Xtreme 5K Adults
+                        </h3>
+                        <p class="ml-4">Realizar 1 vez el circuito de esta modalidad de 25 obstáculos</p>
+                    </li>
+                </ul>
+            </Item>
+
+            <Item title="¿Cuándo y dónde empieza mi carrera?">
+                <p>
+                    Debes acudir 1 hora antes de tu hora de salida al punto de
+                    registro. El punto de registro es la zona de recepción de
+                    participantes en la entrada de Parque Sur.
+                </p>
+                <p>
+                    En este punto se valida la entrada, se hace entrega de la
+                    pulsera y se resuelven todas las dudas sobre la carrera.
+                </p>
+            </Item>
+
+            <Item title="¿A qué hora y dónde es la salida y meta de cada modalidad?">
+                <p class="mb-4">
+                    Pasarlo bien desde el comienzo de esta carrera es nuestro
+                    objetivo, por lo que para evitar que estés haciendo largas
+                    colas, te proponemos diferentes horarios de salida:
+                </p>
+                <ul class="grid gap-4 grid-cols-2 lg:grid-cols-4">
+                    <li class="mb-6 bg-green-100 p-4">
+                        <h3 class="font-bold text-lg">
+                            Playland Warrior Race 1,5K
+                        </h3>
+                        <p>
+                            <strong>Salida:</strong> Arco de salida dipuesto en
+                            Parque Sur
+                        </p>
+                        <p><strong>Meta:</strong> Campo de Fútbol número 3</p>
+
+                        <h4 class="text-lg font-bold text-center mt-4">Horarios</h4>
+                        <table class="table-fixed text-center">
+                            <thead>
+                                <tr>
+                                    <th class="w-32">Sábado</th>
+                                    <th class="w-32">Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>11:00h</td>
+                                    <td>11:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00h</td>
+                                    <td>12:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>16:00h</td>
+                                    <td>16:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00h</td>
+                                    <td>17:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>18:00h</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="mb-6 bg-orange-100 p-4">
+                        <h3 class="font-bold text-lg">Warrior Race 3K</h3>
+                        <p>
+                            <strong>Salida:</strong> Arco de salida dipuesto en el
+                            Barranco de Maspalomas
+                        </p>
+                        <p><strong>Meta:</strong> Campo de Fútbol número 3</p>
+
+                        <h4 class="text-lg font-bold text-center mt-4">Horarios</h4>
+                        <table class="table-fixed text-center">
+                            <thead>
+                                <tr>
+                                    <th class="w-32">Sábado</th>
+                                    <th class="w-32">Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>11:00h</td>
+                                    <td>11:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00h</td>
+                                    <td>12:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>16:00h</td>
+                                    <td>16:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00h</td>
+                                    <td>17:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>18:00h</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="mb-6 bg-red-200 p-4">
+                        <h3 class="font-bold text-lg">Warrior Race 5K</h3>
+                        <p>
+                            <strong>Salida:</strong> Arco de salida dipuesto en el
+                            Barranco de Maspalomas
+                        </p>
+                        <p><strong>Meta:</strong> Campo de Fútbol número 3</p>
+
+                        <h4 class="text-lg font-bold text-center mt-4">Horarios</h4>
+                        <table class="table-fixed text-center">
+                            <thead>
+                                <tr>
+                                    <th class="w-32">Sábado</th>
+                                    <th class="w-32">Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>11:00h</td>
+                                    <td>11:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00h</td>
+                                    <td>12:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>16:00h</td>
+                                    <td>16:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00h</td>
+                                    <td>17:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>18:00h</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="mb-6 bg-neutral-200 p-4">
+                        <h3 class="font-bold text-lg">
+                            Warrior Race 5K Adults Competitiva
+                        </h3>
+                        <p>
+                            <strong>Salida:</strong> Arco de salida dipuesto en el
+                            Barranco de Maspalomas
+                        </p>
+                        <p><strong>Meta:</strong> Campo de Fútbol número 3</p>
+
+                        <h4 class="text-lg font-bold text-center mt-4">Horarios</h4>
+                        <table class="table-fixed text-center">
+                            <thead>
+                                <tr>
+                                    <th class="w-32">Sábado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>18:00h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+                <p class="mb-6">
+                    <em
+                        >Recuerda acudir 1 hora antes de tu hora de salida a validar
+                        tu entrada. El punto de recogida es la zona de recepción de
+                        participantes en la entrada de Parque Sur.</em
+                    >
+                </p>
+            </Item>
+
+            <Item title="¿Cómo me registro?">
+                <ol class="list-decimal ml-4">
+                    <li>Elige tu fecha</li>
+                    <li>Elige a qué hora quieres empezar a divertirte</li>
+                    <li>Elige el número* de integrantes de tu equipo<br><small>(Los equipos siempre tienen que tener mínimo un adulto. Combinaciones posibles: 1 adulto + 1 menor ; 1 adulto + 2 menores ; 1 adulto + 3 menores)</small></li>
+                    <li>Rellena los datos de los participantes</li>
+                    <li>Realiza el pago y obtén tus entradas</li>
+                </ol>
+                <p class="mt-4 italic">*Si quieren participar 2ad + 1 menor deben elegir la opción de 3 entradas.<br>*Si quieren participar 2ad + 2 menor deben elegir la opción de 4 entradas. </p>
+                <div class="flex justify-center mt-6">
+                    <RegisterButton client:load text="Regístrate ya aqui" />
+                </div>
+            </Item>
+
+            <Item title="¿Qué necesito llevar?">
+                <ul>
+                    <li>✔️ Resguardo de las inscripciones de todos los integrantes del equipo</li>
+                    <li>✔️ Agua</li>
+                    <li>✔️ Barritas o geles si crees que puedes necesitarlo. <br><small>(En ningún momento podrás tirar los envases al suelo)</small></li>
+                    <li>✔️ Toalla y ropa de baño</li>
+                    <li>✔️ Calcetines</li>
+                    <li>✔️ Ropa de cambio. Te llenarás de barro, te mojarás.</li>
+                    <li>✔️ Crema solar</li>
+                    <li>✔️ Gorra</li>
+                </ul>
+            </Item>
+
+            <Item title="¿Qué pasa con la cesión de mis datos y con los derechos de imagen?">
+                <p>Al inscribirse en la Warrior Race da su consentimiento para que la organización de la prueba, trate automáticamente y con finalidad únicamente deportiva, promocional o comercial sus datos de carácter personal, conforme establece la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, modificada con fecha 5 de marzo de 2011. La organización se reserva los derechos exclusivos de las imágenes, de tomar y recopilar fotografías, vídeo e información de la prueba.</p>
+            </Item>
+
+            <Item title="¿Y si se suspende la prueba por algún motivo?">
+                <p>La organización de carrera se reserva el derecho de suspensión de la prueba por causas de fuerza mayor. En tal caso NO SE REEMBOLSARÁ el importe de las inscripciones ni se cubrirán los gastos de los participantes. Las entradas serán canjeables en el siguiente evento gratuito de similares características.</p>
+            </Item>
+
+            <Item title="¿Puedo ser voluntario en la maspalomas warrior race?">
+                <p>¡Claro que sí! Ser voluntario en una Warrior Race es una experiencia única. Si deseas ser parte de nuestro equipo, visita la web del evento y completa el formulario de voluntariado. Necesitamos un gran número de voluntarios en cada carrera de obstáculos para asegurar su éxito. Ser voluntario te permitirá conocer a mucha gente y disfrutar de un día en el ‘backstage’ de una emocionante prueba de obstáculos. Además, recibirás una camiseta de voluntario, comida, bebida y una inscripción gratuita para otra Warrior Race.</p>
+            </Item>
+
+            <Item title="¿Qué obtengo como voluntario en la carrera de obstáculos?">
+                <p>Participar como voluntario en la carrera de obstáculos te brinda una experiencia inolvidable. Además, recibirás comida, bebida y una inscripción gratuita para la próxima Warrior Race que tú elijas. Anímate a vivir algo diferente rodeado de un buen equipo en la carrera de obstáculos.</p>
+            </Item>
+
+            <Item title="¿Pueden los espectadores acceder al recorrido de la warrior race? ¿Hay algún costo por entrar?">
+                <p>¡Sí! Las carreras de obstáculos están abiertas a los espectadores, y no se cobra ninguna tarifa de entrada. Sin embargo, es posible que en algunos circuitos haya zonas restringidas a las que los espectadores no puedan acceder por razones de seguridad. Aún así, habrá puntos estratégicos desde donde los espectadores podrán tener una buena visión de los obstáculos y animar a los concursantes.</p>
+            </Item>
+
+            <Item title="¿Qué pasa si hay un obstáculo con agua y no sé nadar?">
+                <p>Si en algún obstáculo de la carrera de obstáculos que se requiere nadar y no te sientes seguro/a es importante comunicárselo a uno/a de los monitores/as de la competición. El monitor/a te proporcionará las instrucciones adecuadas para afrontar el obstáculo de manera segura.</p>
+            </Item>
+
+            <Item title="¿Puedo saltarme un obstáculo? ¿Qué ocurre si lo hago? ¿Hay alguna penalización?">
+                <p>En Warrior Race, te animamos a intentar superar todos los obstáculos. Sin embargo, si no logras superar uno de ellos, tendrás que cumplir una penalización aleatoria (comba, sentadillas...) u otro obstáculo complementario. Es importante afrontar los desafíos con determinación y no evitarlos, ya que forman parte de la experiencia y superarlos te permitirá superarte a ti mismo/a.</p>
+            </Item>
+
+            <Item title="¿Hay tiempo límite para terminar una carrera?">
+                <p>Por el momento, en las carreras de obstáculos, no hay un límite de tiempo para finalizar la carrera. ¡Así que disfruta de la experiencia y cruza la línea de meta con satisfacción! Estaremos esperando para aplaudirte merecidamente.</p>
+            </Item>
+
+            <Item title="¿Qué ropa debería llevar en la carrera warrior race?">
+                <p>Para la carrera de obstáculos, te recomendamos usar ropa deportiva que te resulte cómoda y te permita moverte libremente. Evita el algodón, ya que se carga de agua y barro. Una camiseta ajustada también es ideal para evitar enganches en los obstáculos. Además, es fundamental contar con un buen calzado deportivo que ofrezca un agarre seguro, ya que el agua y el barro pueden dañar el calzado y aumentar el riesgo de resbalones. Te recomendamos los modelos OCR de ORIOCX, que son resistentes al agua y al barro, brindando un agarre óptimo para superar los obstáculos de la carrera de obstáculos. Es aconsejable llevar una toalla para cambiarte después de la carrera, así como una bolsa para guardar la ropa sucia. Ten en cuenta que participar en una carrera de obstáculos puede ser agotador y es probable que termines embarrado/a, empapado/a y sudado/a, por lo que es recomendable llevar ropa de cambio.</p>
+            </Item>
+
+            <Item title="¿Qué debo hacer cuando llegue a la zona de la carrera el día de la prueba?">
+                <p>Al llegar a la zona de la carrera de obstáculos Warrior Race el día de la prueba, hay algunos pasos importantes a seguir:</p>
+                <ol class="m-4 list-decimal">
+                    <li>Presenta el resguardo de las inscripciones de todos los integrantes del equipo en la zona de registro</li>
+                    <li>Recoge tu pulsera</li>
+                    <li>Dirígete a la zona de marcado para escribir el número de dorsal en tu brazo (opcional) o pintar tu cara para la batalla.</li>
+                    <li>Busca la zona de salida y prepárate para disfrutar de la carrera de obstáculos.</li>
+                </ol>
+            </Item>
+
+            <Item title="¿A qué hora debo llegar el día de la carrera y que debo llevar conmigo?">
+                <p>Es muy importante llegar al menos una hora antes del inicio de la carrera de obstáculos para tener tiempo suficiente para realizar el registro y prepararte para la competición.</p>
+                <p>Asegúrate de llevar contigo:</p>
+                <ul class="m-4">
+                    <li>✔️ El resguardo de inscripción de todos los integrantes del equipo</li>
+                    <li>✔️ Una toalla y una bolsa para guardar la ropa sucia después de la carrera</li>
+                    <li>✔️ Ropa deportiva adecuada para la competición y el clima</li>
+                    <li>✔️ Un buen calzado deportivo, preferiblemente modelos OCR de ORIOCX para un mejor agarre en los obstáculos</li>
+                    <li>✔️ Una botella de agua, geles y/o barritas para mantenerte hidratado/a y enérgico/a antes y después de la carrera</li>
+                </ul>
+            </Item>
+
+            <Item title="¿Qué pasa si un componente de mi equipo se lesiona, puede cambiarlo por otro?">
+                <p>Si un miembro de tu equipo se lesiona antes de la carrera de obstáculos, puedes realizar el cambio de forma gratuita hasta el cierre de inscripciones,
+                     que suele ser tres días antes del evento, contactando a través de <a class="text-red-800" href="mailto:warriorraceplayland@gmail.com">warriorraceplayland@gmail.com</a> y plantear tu situación, y en la medida de lo posible, se puede intentar encontrar una solución.</p>
+            </Item>
+
+            <Item title="¿Devolvéis el dinero de la inscripción?">
+                <p>La organización de carrera se reserva el derecho de suspensión de la prueba por causas de fuerza mayor. 
+                    En tal caso NO SE REEMBOLSARÁ el importe de las inscripciones ni se cubrirán los gastos de los participantes. 
+                    Las entradas serán canjeables en el siguiente evento gratuito de similares características.</p>
+            </Item>
+
+            <Item title="¿Que es el sistema de salida en tandas?">
+                <p>En todas las Warrior Race las salidas se hacen en tandas. A la hora de realizar la inscripción eliges tu tanda, siempre y cuando queden plazas. ¿Quieres competir? Corre al lado de los mejores e inscríbete en la tanda Warrior Race Extreme 5K Adults Competitiva. Esta es la última tanday única de salida del sábado. Asegúrate de inscribirte lo antes posible para garantizarte tu lugar adecuado en las distintas tandas. Los participantes empiezan a correr cada hora en cada oleada, dependiendo del número de participantes.</p>
+            </Item>
+
+            <Item title="¿Hay algún límite de edad para participar?">
+                <p>Sí, en la carrera de obstáculos, se aplican recomendaciones de edad. Las categorías disponibles suelen ser:</p>
+                <ul class="m-4">
+                    <li><strong>Playland Warrior Race 1,5K:</strong> a partir de 5 años</li>
+                    <li><strong>Warrior Race 3K:</strong> a partir de 10 años</li>
+                    <li><strong>Warrior Race Extreme 5K:</strong> a partir de 13 años</li>
+                    <li><strong>Warrior Race Xtreme 5K Adults Competitiva:</strong> a partir de 18 años</li>
+                </ul>
+                <p>Es importante tener en cuenta que, aunque haya categorías para diferentes edades, es responsabilidad de cada participante asegurarse de que está en condiciones físicas adecuadas para enfrentar los desafíos de la carrera de obstáculos. <a class="font-bold text-red-900" href="/bases">Leer bases legales</a></p>
+                
+            </Item>
+
+            <Item title="Estoy teniendo problemas con el proceso de inscripción online">
+                <p>Si estás teniendo problemas con el proceso de inscripción online en la carrera de obstáculos,
+                     te recomendamos intentar abrir la página web en un navegador diferente y asegurarte de que las cookies estén habilitadas. 
+                     Si el problema persiste, puedes ponerte en contacto con el equipo de atención al cliente a través de <a class="text-red-900" href="mailto:info@entradascanarias.com">info@entradascanarias.com</a> y recibir asistencia.</p>
+            </Item>
+        </div>
+    </section>
+</Layout>

@@ -7,9 +7,19 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "upload": "rsync -a /home/cvc/apps/warrior-race/dist/ wrace@warriorrace.es:./httpdocs/"
   },
   "dependencies": {
-    "astro": "^3.2.3"
+    "@astrojs/svelte": "^4.0.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "@fontsource-variable/oswald": "^5.0.17",
+    "astro": "^3.3.2",
+    "sass": "^1.69.4",
+    "svelte": "^4.2.2",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "astro-icon": "^0.8.1"
   }
 }

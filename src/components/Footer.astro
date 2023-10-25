@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon'
+
+const year = new Date().getFullYear()
+---
+
+<footer class="bg-blue-950 h-14 flex text-white flex-row justify-between items-center px-4">
+    <p><a href="https://playlandgrancanaria.com">Playland Gran Canaria</a>&nbsp;{year}</p>
+    <div class="flex flex-row gap-3">
+        <a href="https://instagram.com/playlandgrancanaria" title="Instagram"><Icon class="h-9 hover:scale-150 transition-transform" name="ri:instagram-fill" /></a>
+        <a href="https://www.youtube.com/channel/UClZaan2-ykHvbBqgvZH_84A" title="Youtube"><Icon class="h-9 hover:scale-150 transition-transform text-white" name="ri:youtube-fill" /></a>
+    </div>
+</footer>

@@ -1,0 +1,18 @@
+---
+import Layout from "@layouts/MainLayout.astro";
+//import RegisterForm from "@components/RegisterForm.svelte";
+---
+
+<Layout title="Circuito Warrior Race" page="registro">
+    <!--<RegisterForm maxKids={3} endpoint="https://api.playlandgrancanaria.com/warrior/register" client:load />-->
+    <h1 class="text-4xl text-center bg-red-900 text-white py-4">Registro</h1>
+
+    <section class="flex flex-col items-center">
+        <h2 class="text-center text-2xl m-6">Elige tu modalidad</h2>
+        <div class="flex gap-6 m-4 text-lg">
+            <a class="text-center bg-green-300 py-4 px-7 rounded-md" href="https://ventas.entradascanarias.com/events/playland-warrior-race-1-5-km">Playland Warrior Race</a>
+            <a class="text-center bg-orange-300 py-4 px-7 rounded-md" href="https://ventas.entradascanarias.com/events/playland-warrior-race-3-km">Warrior Race 3k</a>
+            <a class="text-center bg-red-300 py-4 px-7 rounded-md" href="https://ventas.entradascanarias.com/events/playland-warrior-race-5-km">Warrior Race 5k</a>
+        </div>
+    </section>
+</Layout>

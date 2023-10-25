@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+    gray?: boolean;
+}
+
+const { title, gray=false } = Astro.props;
+
+const colors = gray? 'odd:bg-neutral-100 even:bg-neutral-50' :'odd:bg-red-100 even:bg-blue-200'
+---
+
+<article class:list={["w-full my-4 p-4", colors]}>
+    <header class="text-center text-2xl font-bold mb-6">{ title }</header>
+    <slot />
+</article>

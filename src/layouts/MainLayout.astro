@@ -1,0 +1,33 @@
+---
+interface Props {
+	title: string;
+	page?: string;
+}
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+const { title, page='' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Warrior Race By Playland GC" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<Header page={page} isHome={page==''} />
+
+		<main>
+			<slot />
+		</main>
+	
+		<Footer />
+	</body>
+</html>

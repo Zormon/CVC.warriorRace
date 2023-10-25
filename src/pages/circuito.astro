@@ -1,0 +1,143 @@
+---
+import type { obstacle } from "@src/types.d"
+import Layout from "../layouts/MainLayout.astro";
+import Obstaculo from "@components/Obstaculo.astro";
+
+
+let obstaculos:Array<obstacle<string>> = [
+    { img:'01_Cubetas', categories:['5'], alt:'Cubetas'},
+    { img:'02_ArrastreCuerdas', categories:['5'], alt:'Arrastre de cuerdas'},
+    { img:'03_Equilibrio', categories:['5'], alt:'Equilibrio'},
+    { img:'04_VolteoCuerdas', categories:['5'], alt:'Volteo de Cuerdas'},
+    { img:'05_Monkey', categories:['5'], alt:'Monkey'},
+    { img:'06_SaltoObstaculos', categories:['5','3'], alt:'Salto de obstáculos'},
+    { img:'07_CircuitoHabilidades', categories:['5','3'], alt:'Circuito de habilidades'},
+    { img:'08_CircuitoObstaculos', categories:['5','3'], alt:'Circuito de obstáculos'},
+    { img:'09_Esquis', categories:['1','3','5'], alt:'Esquís'},
+    { img:'10_ObstaculoRuedas', categories:['1','3','5'], alt:'Obstáculo de ruedas'},
+    { img:'11_Telarana', categories:['1','3','5'], alt:'Telaraña'},
+    { img:'12_CargaSacos', categories:['1','3','5'], alt:'Carga de sacos'},
+    { img:'13_Escalada', categories:['1','3','5'], alt:'Escalada'},
+    { img:'14_DesafioSaltos', categories:['1','3','5'], alt:'Desafío de saltos'},
+    { img:'15_PistaAmericana', categories:['1','3','5'], alt:'Pista americana'},
+    { img:'16_PuenteCristal', categories:['1','3','5'], alt:'Puente de cristal'},
+    { img:'17_EscaleraColgante', categories:['1','3','5'], alt:'Escalera colgante'},
+    { img:'18_ToboganAgua', categories:['1','3','5'], alt:'Tobogán de agua'},
+]
+
+const files = await Astro.glob('../assets/images/obstaculos/*')
+
+let obs:Array<obstacle<ImageMetadata>> = []
+for (const ob of obstaculos) {
+    const img = files.find((el) => el.default.src.split('/').pop().split('.')[0] === ob.img)
+    if (img) {
+        obs.push({
+            img:img.default,
+            categories:ob.categories,
+            alt:ob.alt
+        })
+    }
+}
+
+---
+
+<Layout title="Circuito Warrior Race" page="circuito">
+    
+    <section class="mx-4 my-10">
+        <h1 class="text-4xl text-center bg-blue-900 text-white py-4">Nuestro circuito</h1>
+
+        <p class="mb-3">
+            Todas nuestras modalidades disponen de un recorrido en el que nos
+            gusta mezclar el asfalto, con la tierra y la vegetación, en un
+            entorno emblemático de la isla como es Maspalomas. Sea cual sea tu
+            excusa o miedo, nosotros te ayudaremos a superar ese obstáculo.
+        </p>
+        <p class="mb-3">
+            Desde Warrior Race by Playland sabemos que apuntarse a una carrera
+            de obstáculos no es una decisión fácil pensando que solo son para
+            personas con un alto nivel de rendimiento. Por ello hemos creado
+            este nuevo concepto de competición familiar.
+        </p>
+        <p class="mb-3">
+            En las cuatro modalidades tendrás diferentes categorías por grupo de
+            edad (consultar recomendaciones).
+        </p>
+        <p class="mb-3">
+            Si vas a realizar la carrera con los más peques de la familia,
+            puedes hacerlo en la modalidad de Playland Warrior Race 1,5K. Si aún
+            así piensas que no es suficiente, y tu/s acompañante/s son
+            guerreros/as, te damos la posibilidad de correr en la modadildad de
+            Warrior Race 3K, donde tendrás que poner a prueba vuestra destreza
+            superando más obstáculos. Y si crees que puedes con más caña,
+            apuntante a nuestra Warrior Race Extreme 5K, Warrior Race Extreme 5K
+            Adults Competitiva, donde demostrarás solo, en familia, pareja o con
+            tu equipo que todo se puede lograr.
+        </p>
+        <p class="mb-3">
+            Ven y disfruta de una carrera, llena de sorpresas y obstáculos que
+            te enamorarán.
+        </p>
+
+        <h2 class="text-2xl text-center mt-14 bg-red-900 text-white py-4 mb-6">¿Cuántos kilómetros y obstáculos?</h2>
+        <p class="mb-3">
+            Warrior Race es una carrera de obstáculos donde podrás ponerte a
+            prueba desafiándote a ti mismo/a , en familia, pareja o en haciendo
+            un equipo con tus amistades.
+        </p>
+        <p class="mb-3">
+            Esta carrera de obstáculos esta pensada y creada para todo el mundo
+            ya que los obstáculos están adaptados a todos los niveles pero sobre
+            todo a disfrutarlos y pasarlo muy bien.
+        </p>
+        <p class="mb-3">Podrás elegir entre:</p>
+        <ul class="grid grid-cols-2 lg:grid-cols-4 text-white gap-4">
+            <li class="ml-6 p-3 bg-black rounded-md text-center">
+                <p class="text-2xl">5 Kilómetros</p>
+                <p>Adultos <small>(Competitiva)</small></p>
+                <em class="block font-bold not-italic text-lg">25 obstáculos</em
+                >
+            </li>
+            <li class="ml-6 p-3 bg-red-700 rounded-md text-center">
+                <p class="text-2xl">5 Kilómetros</p>
+                <em class="block font-bold not-italic text-lg">25 obstáculos</em
+                >
+            </li>
+            <li class="ml-6 p-3 bg-orange-700 rounded-md text-center">
+                <p class="text-2xl">3 Kilómetros</p>
+                <em class="block font-bold not-italic text-lg">20 obstáculos</em
+                >
+            </li>
+            <li class="ml-6 p-3 bg-green-900 rounded-md text-center">
+                <p class="text-2xl">1,5 Kilómetros</p>
+                <em class="block font-bold not-italic text-lg">15 obstáculos</em
+                >
+            </li>
+        </ul>
+        <p class="my-3">
+            Cada modalidad tiene diferentes horarios y puntos de salida.
+        </p>
+        <h3 class="text-center text-3xl">¿ACEPTAS EL RETO?</h3>
+    </section>
+
+    <section class="mx-4 my-10 bg-green-100">
+        <h1 class="text-4xl text-center bg-green-900 text-white py-4">Obstáculos</h1>
+        <!--
+            <div class="flex justify-end gap-2 mr-4 mt-2 mb-6 relative">
+            <div class="absolute bg-black w-56 right-4 top-3 h-6"></div>
+            <span class="-skew-x-12 bg-red-700 text-2xl text-white font-bold px-4 py-2">5K</span>
+            <span class="-skew-x-12 bg-blue-700 text-2xl text-white font-bold px-4 py-2">3K</span>
+            <span class="-skew-x-12 bg-green-700 text-2xl text-white font-bold px-4 py-2">1,5K</span>
+        </div>
+        -->
+
+        <div class="grid grid-cols-obstacles gap-6 my-6 place-items-center mx-auto">
+            {
+                obs.map((el) => (
+                    <Obstaculo img={el.img} categories={el.categories} alt={el.alt} />
+                ))
+            }
+        </div>
+    
+
+    </section>
+</Layout>
