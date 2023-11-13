@@ -40,7 +40,7 @@ const endDate = new Date("2023-11-25T09:00:00.000");
         <section class="relative grid place-items-center overflow-hidden h-[270px] md:h-[400px] lg:h-[550px] z-10">
             <video transition:persist="vid" id="video" class="absolute top-0 left-0 w-full" src="/videos/home.webm?2" muted autoplay loop>
             </video>
-            <div class="flex flex-col items-center text-xl md:text-2xl bg-slate-50/20 px-8 pt-3 pb-6 rounded-xl backdrop-blur-md">
+            <div class="flex flex-col items-center text-xl md:text-2xl bg-slate-50/20 px-4 md:px-8 pt-3 pb-6 rounded-xl backdrop-blur-md">
                 <h1 class="text-3xl font-bold text-white text-shadow-sm shadow-black mb-4">Quedan</h1>
                 <div transition:name="count"> <Countdown endDate={endDate} client:load /> </div>
                 <div class="mt-6 motion-safe:hover:scale-125 motion-safe:transition-transform motion-reduce:hover:brightness-125" transition:name="registrate">

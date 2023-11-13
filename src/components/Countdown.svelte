@@ -33,7 +33,7 @@
 
 
 {#if timeLeft > 0}
-<div class={sizeClass}>
+<div class={'main '+sizeClass}>
     <div class="part">
         <span class="num">{countParts.days.toString().padStart(2,'0')}</span>
         {#if showText}<span class="text">Días</span>{/if}
@@ -55,13 +55,34 @@
 
 
 <style lang="scss">
-    .full > .part { 
-        width: 5rem;
-        height: 5rem;
-    }
-    .short > .part { 
-        width: 4rem;
-        height: 4rem;
+    .main {
+        
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+
+        &.full {
+            font-size: 1.2rem;
+            grid-gap: .3em;
+
+            > .part { 
+                width: 4em;
+                height: 4em;
+                border-width: 2px;
+            }
+        }
+
+        &.short { 
+            font-size: 1rem;
+            grid-gap: .2em;
+
+            > .part { 
+                width: 2.9em;
+                height: 3.5em;
+                border-width: 1px;
+            }
+        }
     }
 
     .part { 
@@ -70,7 +91,8 @@
         place-items: center;
         justify-content: center;
         background-color: #ffffff55;
-        border: 2px solid white;
+        border-color: white;
+        border-style: solid;
         border-radius: 0.375rem;
 
         .num { 
